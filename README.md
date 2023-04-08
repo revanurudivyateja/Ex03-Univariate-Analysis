@@ -1,5 +1,32 @@
 # Ex03-Univariate-Analysis
+## Aim:
 
+To read the given data and perform the univariate analysis with different types of plots.
+
+## Explanation:
+
+Univariate analysis is basically the simplest form to analyze data. Uni means one and this means that the data has only one kind of variable. The major reason for univariate analysis is to use the data to describe. The analysis will take data, summarise it, and then find some pattern in the data.
+
+## Algorithm:
+
+## Step1:
+Read the given data.
+
+## Step2:
+Get the information about the data.
+
+## Step3:
+Remove the null values from the data.
+
+## Step4:
+Mention the datatypes from the data.
+
+## Step5:
+Count the values from the data.
+
+## .Step6:
+Do plots like boxplots,countplot,distribution plot,histogram plot.
+## program
 import pandas as pd 
 import numpy as np 
 df=pd.read_csv("/content/SuperStore (1).csv")
@@ -65,3 +92,6 @@ import pandas as pd
 import seaborn as sns
 sns.displot(x='Sales',data=df)
 ![image](https://user-images.githubusercontent.com/86044259/192249169-959a00c3-43f7-43d4-8c2f-c36d637b4138.png)
+## Result:
+
+Thus we have read the given data and performed the univariate analysis with different types of plots.
