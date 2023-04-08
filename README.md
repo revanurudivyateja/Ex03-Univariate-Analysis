@@ -30,8 +30,8 @@ Do plots like boxplots,countplot,distribution plot,histogram plot.
 
 ## Program
 ```
-Developed by : M.Deepak Chowdary
-Registration Number : 212220040085
+Developed by : R.Divya teja
+Registration Number : 212220040132
 
 import pandas as pd
 import numpy as np
