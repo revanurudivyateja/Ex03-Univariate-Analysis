@@ -1,97 +1,88 @@
 # Ex03-Univariate-Analysis
-## Aim:
+
+## Aim
 
 To read the given data and perform the univariate analysis with different types of plots.
 
-## Explanation:
+## Explanation
 
 Univariate analysis is basically the simplest form to analyze data. Uni means one and this means that the data has only one kind of variable. The major reason for univariate analysis is to use the data to describe. The analysis will take data, summarise it, and then find some pattern in the data.
 
-## Algorithm:
+## Algorithm
 
-## Step1:
+### Step1
 Read the given data.
 
-## Step2:
+### Step2
 Get the information about the data.
 
-## Step3:
+### Step3
 Remove the null values from the data.
 
-## Step4:
+### Step4
 Mention the datatypes from the data.
 
-## Step5:
+### Step5
 Count the values from the data.
 
-## .Step6:
+### Step6
 Do plots like boxplots,countplot,distribution plot,histogram plot.
-## program
-import pandas as pd 
-import numpy as np 
-df=pd.read_csv("/content/SuperStore (1).csv")
+
+## Program
+```
+Developed by : M.Deepak Chowdary
+Registration Number : 212220040085
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+df=pd.read_csv("SuperStore.csv")
+df
 df.head()
-![image](https://user-images.githubusercontent.com/86044259/192247626-9881035e-de6b-4cbe-a285-57040540c6fe.png)
-
-
-df.isnull().sum()
-![image](https://user-images.githubusercontent.com/86044259/192247711-ff09b84d-f052-4f70-9a59-765aa59ccf83.png)
-
-
 df.info()
-![image](https://user-images.githubusercontent.com/86044259/192247835-72a3f1c5-f519-4c0e-8b48-8926b6c0069a.png)
-
-
+df.describe()
+df.isnull().sum()
 df.dtypes
-![image](https://user-images.githubusercontent.com/86044259/192247987-7d0f59ad-2777-473a-8cc1-b0a273862ff0.png)
+df['Postal Code'].value_counts()
+sns.boxplot(x="Postal Code", data=df)
+sns.countplot(x="Postal Code", data=df)
+sns.distplot(df["Postal Code"])
+sns.histplot(x="Postal Code", data=df)
+```
+## OUTPUT
 
+### DATA
+![DS1](https://user-images.githubusercontent.com/93427345/191898791-4de0a8c9-8581-41ea-8d84-b5ec9c6743c7.PNG)
 
-df.dtypes
-![image](https://user-images.githubusercontent.com/86044259/192248060-4720a795-c1dd-4204-9aeb-b6b9215b6474.png)
+### DATA HEAD
+![DS2](https://user-images.githubusercontent.com/93427345/191898834-8d3130d9-0b40-4365-a3ea-74e3d28431d2.PNG)
 
+### DATA INFORMATION
+![DS3](https://user-images.githubusercontent.com/93427345/191898931-2e68fa8f-cf9d-43bc-a312-daf160e07afc.PNG)
 
-import pandas as pd
-import seaborn as sns
-sns.boxplot(x='Sales',data=df)
-![image](https://user-images.githubusercontent.com/86044259/192248153-1cdcbacf-3138-48f0-90ca-7e1fb83d1ff9.png)
+### DATA DESCRIBE
+![DS4](https://user-images.githubusercontent.com/93427345/191899037-e94c8007-a87b-4ead-b12d-71bd330a2a8c.PNG)
 
+### DATA NULL VALUES
+![DS5](https://user-images.githubusercontent.com/93427345/191899055-86795845-012e-4143-b9c9-8713c4a43ff4.PNG)
 
-import pandas as pd
-import seaborn as sns
-sns.countplot(x='Postal Code',data=df)
-![image](https://user-images.githubusercontent.com/86044259/192248243-209c36e7-9f95-4fff-b5ab-5155039d887c.png)
+### DATA DATA TYPES
+![DS6](https://user-images.githubusercontent.com/93427345/191899082-b33f146f-342f-4f3a-91eb-a75f3df20ffc.PNG)
 
+### DATA VALUE COUNT
+![DS7](https://user-images.githubusercontent.com/93427345/191899148-cd36cef2-1862-47bc-b22d-5b103fceb4cb.PNG)
 
-import pandas as pd
-import seaborn as sns
-sns.displot(df["Postal Code"])
-![image](https://user-images.githubusercontent.com/86044259/192248537-edab457b-ea61-4ceb-a394-d9ad181d7cc0.png)
+### BOXPLOT
+![DS8](https://user-images.githubusercontent.com/93427345/191899185-be661814-d402-4245-ba45-cbe649579323.PNG)
 
+### COUNTPLOT
+![DS9](https://user-images.githubusercontent.com/93427345/191899219-e401211a-2cfc-4307-94c8-80141da63e6c.PNG)
 
-import pandas as pd
-import seaborn as sns
-sns.histplot(x="Postal Code",data=df)
-![image](https://user-images.githubusercontent.com/86044259/192248619-6b1c05fd-9c55-440e-82bf-bf0c754e5e3f.png)
+### DISTRIBUTION PLOT
+![DS10](https://user-images.githubusercontent.com/93427345/191899278-36e61237-4504-4203-b341-bb5da1c7a3e8.PNG)
 
+### HISTOGRAM PLOT
+![DS11](https://user-images.githubusercontent.com/93427345/191899301-c3316b5a-2418-44e3-8422-c2e772aca695.PNG)
 
-import pandas as pd
-import seaborn as sns
-df=pd.read_csv("/content/SuperStore (1).csv")
-df.skew()
-![image](https://user-images.githubusercontent.com/86044259/192248984-f9bbb521-4670-4389-b78a-29916ad05c00.png)
-
-
-import pandas as pd
-import seaborn as sns
-sns.histplot(x='Sales',data=df)
-![image](https://user-images.githubusercontent.com/86044259/192249061-9f8e62db-db36-4ea9-912f-6820dbc1ade2.png)
-
-
-
-import pandas as pd
-import seaborn as sns
-sns.displot(x='Sales',data=df)
-![image](https://user-images.githubusercontent.com/86044259/192249169-959a00c3-43f7-43d4-8c2f-c36d637b4138.png)
-## Result:
-
+## RESULT
 Thus we have read the given data and performed the univariate analysis with different types of plots.
